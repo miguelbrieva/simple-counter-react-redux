@@ -1,0 +1,82 @@
+@import "../../styles/globals/mixins";
+@import "../../styles/globals/variables";
+
+.counter {
+  margin-bottom: 10px;
+  display: flex;
+
+  &__name {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    p {
+      display: inline-block;
+      max-width: 80%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: $carbon-light;
+      font-size: 1.2em;
+      vertical-align: middle;
+      position: relative;
+    }
+  }
+
+  &__count-wrapper {
+    display: flex;
+  }
+
+  &__count {
+    min-width: 2.5em;
+    padding: 5px 0;
+    color: $carbon-light;
+    font-size: 1.2em;
+    text-align: center;
+    background: $silver-light;
+  }
+
+  &__button {
+    @include btn-base;
+    width: 40px;
+
+    &--min {
+      border-radius: $gap-xs 0 0 $gap-xs;
+    }
+    &--max {
+      border-radius: 0 $gap-xs $gap-xs 0;
+    }
+  }
+
+  &__delete {
+    display: block;
+    width: 1.7em;
+    height: 1.7em;
+    min-width: 0;
+    background: transparent;
+    opacity: 0.3;
+    transition: $transition;
+    svg {
+      fill: $coral;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover {
+      color: $coral-light;
+    }
+  }
+
+  &:hover {
+    .counter__delete {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: $media-width) {
+    .counter__delete {
+      display: none;
+    }
+  }
+}

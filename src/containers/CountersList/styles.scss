@@ -1,0 +1,17 @@
+@import "../../styles/globals/mixins";
+@import "../../styles/globals/variables";
+
+.counter-list {
+  @include box-base;
+  margin-bottom: $gap-md;
+}
+
+.counters {
+  padding: 10px 0;
+
+  &__no-counters {
+    text-align: center;
+    font-size: 2em;
+    color: $silver-medium;
+  }
+}

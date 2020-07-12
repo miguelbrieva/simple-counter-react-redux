@@ -1,0 +1,64 @@
+@import "../../styles/globals/mixins";
+@import "../../styles/globals/variables";
+
+.checkbox {
+  margin-bottom: $gap-sm;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  &__label {
+    position: relative;
+    color: $silver;
+    padding-left: 2.5em;
+
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 2em;
+      height: $switch-size;
+      border-radius: $switch-size;
+      background: $silver-light;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: $switch-size;
+      height: $switch-size;
+      border-radius: $switch-size;
+      background: $silver;
+      transition: 100ms ease-in;
+    }
+    &:hover {
+      &:after {
+        box-shadow: 0 0 0 4px rgba(121, 202, 239, 0.1);
+      }
+    }
+  }
+
+  input[type="checkbox"]:checked + .checkbox__label:after {
+    background: $sky;
+    left: 0.8em;
+  }
+}
+
+@media (min-width: $media-width) {
+  .checkbox {
+    flex: 1;
+  }
+}

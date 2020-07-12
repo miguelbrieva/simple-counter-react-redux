@@ -1,0 +1,14 @@
+@import "../../styles/globals/variables";
+
+.clear-btn {
+  padding: 0;
+  padding-right: $gap-xs;
+  min-width: 0;
+  font-size: 0.8em;
+  color: $coral;
+  background: transparent;
+  margin-bottom: 7px;
+  &:hover {
+    color: $coral-light;
+  }
+}

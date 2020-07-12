@@ -1,0 +1,16 @@
+@import "../../styles/globals/mixins";
+@import "../../styles/globals/variables";
+
+.header {
+  @include box-base;
+  margin-bottom: $gap-md;
+  text-align: center;
+
+  &__title {
+    margin-top: $gap-sm;
+    margin-bottom: $gap-lg;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: $carbon;
+  }
+}

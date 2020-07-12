@@ -1,0 +1,45 @@
+@mixin input-base {
+  padding: $gap-xs;
+  background-color: $silver-light;
+  border-radius: $radius-sm;
+  border: 1px solid transparent;
+  width: 100%;
+  color: $carbon-light;
+
+  &::placeholder {
+    font-size: 1em;
+    color: $silver;
+  }
+
+  &:focus {
+    border: 1px solid $sky;
+    box-shadow: 0 0 0 4px rgba(121, 202, 239, 0.1);
+    background: $snow;
+    &::placeholder {
+      color: $silver;
+    }
+  }
+}
+
+@mixin btn-base {
+  font-size: 1em;
+  color: $snow;
+  border-radius: $radius-sm;
+  background: $sky;
+  transition: $transition;
+  &:hover {
+    background: $sky-dark;
+  }
+}
+
+@mixin box-base {
+  padding: $gap-sm;
+  background: $snow;
+  box-shadow: $shadow;
+  border-radius: $radius-md;
+}
+
+@mixin filter__header {
+  display: flex;
+  justify-content: space-between;
+}

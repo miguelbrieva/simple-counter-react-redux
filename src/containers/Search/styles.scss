@@ -1,0 +1,24 @@
+@import "../../styles/globals/mixins";
+@import "../../styles/globals/variables";
+
+.search {
+  margin-bottom: $gap-xs;
+  margin-top: $gap-sm;
+
+  &__input {
+    input {
+      @include input-base;
+    }
+  }
+}
+
+.search__header {
+  @include filter__header;
+}
+
+@media (min-width: $media-width) {
+  .search {
+    flex: 2;
+    margin-right: $gap-sm;
+  }
+}

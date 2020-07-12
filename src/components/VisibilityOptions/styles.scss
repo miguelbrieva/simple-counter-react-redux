@@ -1,0 +1,79 @@
+@import "../../styles/globals/mixins";
+@import "../../styles/globals/variables";
+
+.view-options {
+  @include box-base;
+  margin-bottom: $gap-md;
+
+  &__label {
+    font-size: 0.8em;
+    margin-bottom: $gap-xs;
+    font-weight: bold;
+    text-transform: lowercase;
+    color: lighten($silver, 15%);
+    font-weight: lighter;
+  }
+}
+
+// HEADER
+.view-options__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__alerts {
+    flex: 1;
+    color: $silver;
+  }
+}
+
+// CONTROLS
+.view-options__controls {
+  display: none;
+}
+
+.view-options__controls--visible {
+  display: block;
+}
+
+.sorter {
+  flex: 1;
+  display: flex;
+}
+
+.sort-by,
+.reverse-order {
+  flex: 1;
+}
+
+.sort-by {
+  margin-right: $gap-sm;
+  &__wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    .checkbox {
+      flex: 1;
+    }
+  }
+}
+
+// CONTROLS / FILTERS WRAPPER
+.filters-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  margin-bottom: 10px;
+}
+
+@media (min-width: $media-width) {
+  .filters-wrapper {
+    flex-flow: row wrap;
+  }
+
+  .sort-by {
+    flex: 2;
+    flex-direction: row;
+    &__wrapper {
+      flex-flow: row wrap;
+    }
+  }
+}

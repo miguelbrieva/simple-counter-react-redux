@@ -1,0 +1,38 @@
+@import "../../styles/globals/mixins";
+@import "../../styles/globals/variables";
+
+.add-counter {
+  position: relative;
+  display: flex;
+
+  &__input {
+    width: 100%;
+    margin-right: $gap-sm;
+    @include input-base;
+
+    &--error {
+      border: 1px solid $coral;
+      box-shadow: 0 0 0 4px rgba(255, 118, 118, 0.1);
+
+      &::placeholder {
+        color: $coral;
+      }
+    }
+  }
+
+  &__button {
+    @include btn-base;
+    padding: $gap-xs $gap-md;
+  }
+
+  @media (min-width: $media-width) {
+    &__input {
+      padding: $gap-sm;
+      font-size: 1.2em;
+    }
+
+    &__button {
+      font-size: 1.2em;
+    }
+  }
+}
