@@ -1,4 +1,4 @@
-## SIMPLE COUNTER (REACT REDUX)
+## Simple Counter (react/redux)
 
 This project was bootstrapped with create-react-app.
 
